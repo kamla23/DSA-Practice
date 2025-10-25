@@ -1,0 +1,26 @@
+
+let arr = [0,0,0,0,0,0,0,0,0,0];
+
+let diff = [];
+
+diff[0] = arr[0];
+for(let i = 1; i < arr.length; i++){
+    diff[i] = arr[i] - arr[i-1];
+}
+console.log(diff);
+
+function updateArray(diff, s,e, v){
+    diff[s] += v;
+    if(e+1 < diff.length){
+        diff[e+1] -= v;
+    }
+}
+updateArray(diff, 0, 5, 10);
+console.log(diff);
+
+let a = [];
+a[0] = diff[0];
+for(let j = 1; j < arr.length; j++){
+    a[j] = a[j-1] + diff[j];
+}
+console.log(a);
