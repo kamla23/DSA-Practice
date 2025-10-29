@@ -24,4 +24,4 @@ a[0] = d[0];
 for(let j = 1; j < arr.length; j++){
     a[j] = a[j-1] + d[j];
 }
-console.log(a);
+console.log(a); 
