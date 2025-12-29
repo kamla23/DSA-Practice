@@ -29,9 +29,9 @@ function longestSubString(s, k) {
           sub = length;
         }
     }
-    // console.log(c);
   }
-  return sub;
 }
+return sub;
 }
-console.log(longestSubString("aaacccbbbb", 3));
+console.log(longestSubString("abbbaaaaaggbbc", 4));
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Base Converter</title>
+  </head>
+  <style>
+    div {
+      background-color: #ee00ff;
+      height: 100vh;
+    }
+  </style>
+  <body>
+    <div class="big">
+        <h1>Base Converter</h1>
+      <button id="calcu">Base Calculator</button>
+      <button id="con">Base Converter</button>
+
+      <h2>convert Number from any base to any base:</h2>
+     
+        <lable>Enter Number</lable>
+        <input type="text" class="change" placeholder="" />
+        <lable>From Base</lable>
+        <select id="base1">
+          <option value="2">Binary(2)</option>
+          <option value="8">Octol(8)</option>
+          <option value="10">Decimal(10)</option>
+          <option value="16">Hexa Decimal(16)</option>
+        </select>
+        
+        <lable>To Base</lable>
+        <select id="base2">
+          <option value="2">Binary(2)</option>
+          <option value="8">Octol(8)</option>
+          <option value="10">Decimal(10)</option>
+          <option value="16">Hexa Decimal</option>
+        </select>
+
+        <div id="btn">    
+          <button class="convert" onclick="convert()">Convert</button>
+          <button class="reset" onclick="reset()">Reset</button>
+          <button class="swap" onclick="swap()">Swap</button>
+        </div>
+
+        <lable>Result Number</lable>
+        <textarea id="result" rows="3"></textarea>
+
+        <button class="copy" onclick="copyResult()">Copy</button>
+
+    </div>
+    <script src="base.js"></script>
+  </body>
+</html>

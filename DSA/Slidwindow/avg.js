@@ -12,4 +12,4 @@ var findMaxAverage = function(nums, k) {
    let avg = m/k;
    return avg;
 }
-console.log(findMaxAverage([1,12,-5,-6,50,3], 4));
+console.log(findMaxAverage([1,12,-5,-6,50,3], 4)); 

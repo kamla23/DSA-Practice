@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Base Converter</title>
+  <style>
+    body {
+      background: #f0f0f0;
+      font-family: Arial;
+      padding: 40px;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      width: 300px;
+      margin: auto;
+      border-radius: 8px;
+      text-align: center;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    p {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Base Converter</h2>
+
+    <input type="number" id="num" placeholder="Enter decimal number">
+
+    <div>
+      <button onclick="toBinary()">Binary</button>
+      <button onclick="toDecimal()">Decimal</button>
+      <button onclick="toOctal()">Octal</button>
+      <button onclick="toHex()">Hexadecimal</button>
+    </div>
+
+    <p id="result"></p>
+  </div>
+
+  <script src="simple.js"></script>
+</body>
+</html>

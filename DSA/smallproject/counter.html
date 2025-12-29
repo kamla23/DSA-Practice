@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+<style>
+    button:disabled{
+        opacity:0.4;
+        cursor:not-allowed;
+    }
+
+    .bounce{
+        animation: bounceEffect 0.3s ease;
+    }
+    @keyframes bounceEffect{
+        0% {transform:scale(1);}
+        50% {transform:scale(1.3);}
+        100% {transform:scale(1);}
+
+    }
+</style>
+<body>
+    <h1>Counter</h1>
+    <div>
+    <h2 id="update">0</h2>
+    <button id="inc">increase</button>
+    <button id="dec">Decrease</button>
+    <button id="btn">reset</button>
+    <p id="msg"></p>
+    </div> 
+</body>
+<script>
+const up = document.getElementById("update");
+const incre = document.getElementById("inc");
+const decre = document.getElementById("dec");
+const btnn = document.getElementById("btn");
+
+const clickSound = new Audio("click.mp3");
+const errorSound = new Audio("error.mp3");
+
+let count = 0;
+
+const savedValue = localStorage.getItem("counterValue");
+if (savedValue !== null) {
+    count = parseInt(savedValue);
+}
+
+function increasebutton(){
+    up.textContent = count;
+     localStorage.setItem("counterValue", count);
+    up.classList.add("bounce");
+    setTimeout(() => {
+        up.classList.remove("bounce");
+    }, 300)
+    if(count === 10){
+        up.style.color = "red";
+        msg.textContent = "max limit reached";
+        msg.style.color = "red";
+    }else if(count === 0){
+        up.style.color = "blue";
+        msg.textContent = "min limit reched!";
+        msg.style.color = "blue";
+    }else{
+        up.style.color = "green";
+        msg.textContent = "";
+    }
+
+    if(count >= 10){
+        incre.disabled = true;
+    }else{
+        incre.disabled = false;
+    }
+    if(count <= 0){
+        decre.disabled = true;
+    }else{
+        decre.disabled = false;
+    }
+}
+
+incre.addEventListener("click",() => {
+    if(count < 10){
+    count++;
+    clickSound.play();
+    }else{
+    errorSound.play();
+    }
+    increasebutton();
+} );
+
+decre.addEventListener("click", ()=> {
+    if(count > 0){
+        count--;
+        clickSound.play();
+    }else{
+    errorSound.play();
+    }
+  
+    increasebutton();
+});
+
+btnn.addEventListener("click", () => {
+    count = 0;
+     clickSound.play();
+    increasebutton();
+});
+
+
+window.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowUp") {
+        if(count < 10){
+            count++;
+        increasebutton();
+        }
+    }
+    if (e.key === "ArrowDown") {
+        if(count > 0){
+            count--;
+        increasebutton();
+        }
+    }
+});
+
+increasebutton()
+
+</script>
+</html>
+
+
+
