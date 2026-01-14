@@ -91,17 +91,17 @@
 //====================================================================//
 
 // exists//
-function exists(a, b){
-    let arr = [];
-    for(let i = 0; i < a.length; i++){
-        for(let j = 0; j < b.length; j++){
-            if(b[j] === a[i]){
-                arr.push(b[j]);
-            }
-        }
-    }
-  return [...new Set(arr)];
-}
-console.log(exists([ 1, 2, 3, 4 ], [3, 4, 5, 6]));
-console.log(exists([ 1, 1, 2, 2, 3],[2, 2, 3, 4]));
+// function exists(a, b){
+//     let arr = [];
+//     for(let i = 0; i < a.length; i++){
+//         for(let j = 0; j < b.length; j++){
+//             if(b[j] === a[i]){
+//                 arr.push(b[j]);
+//             }
+//         }
+//     }
+//   return [...new Set(arr)];
+// }
+// console.log(exists([ 1, 2, 3, 4 ], [3, 4, 5, 6]));
+// console.log(exists([ 1, 1, 2, 2, 3],[2, 2, 3, 4]));
 
