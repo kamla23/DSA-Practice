@@ -15,4 +15,4 @@ for(let i = 1; i <= n; i++){
 }
 return hcf;
 }
-console.log(highest(12, 18)); 
+console.log(highest(12, 18));
