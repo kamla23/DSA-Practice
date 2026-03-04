@@ -13,6 +13,7 @@
 //=================two pointer================//
 function dublicate(arr) {
   arr.sort((a, b) => a - b);
+  console.log(arr);
   let start = 0;
   let end = 1;
   while (end < arr.length) {

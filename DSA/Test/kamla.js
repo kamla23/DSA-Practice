@@ -75,18 +75,23 @@
 // console.log(capital);
 
 //======================================//
-console.log("abc".repeat(3));
+// console.log("abc".repeat(3));
+//================================================
 console.log("hello".charCodeAt(0));
-
+//=================================
 let obj={a:1,b:2}; 
 console.log(Object.assign({},obj));
+//================================
 
 console.log(typeof function() {});
-
-console.log("JavaScript".lastIndexOf("a"));
+//========================================
+console.log("JavaScript".lastIndexOf("r"));
+//==============================================
 
 console.log("hello".padStart(9,"0"));
+//================================================
 console.log([1,2,3].includes(2));
+//================================================
 
 let a = {x:1};
 let b = {y:2};
@@ -94,20 +99,22 @@ let c = Object.assign(a,b);
 let d = {...a, ...b}
 console.log(c);
 console.log(d);
-
+//=================================
 let o ={a:1,b:2}; 
 console.log(Object.values(o));
+//=================================
 
 function test(){
     return;
 } 
 console.log(test());
 
-
+//=================================
 let f=function(a,b=5){
     return a+b;
 }; 
 console.log(f(2));
+//========================================
 
 let i=0; 
 while(i<3){
